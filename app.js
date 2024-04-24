@@ -1,21 +1,18 @@
-const balance = 1114;
-const bonusBalance = 1230;
-const isBanned = false;
-const isExist = false;
-const isSelling = true;
-let message = '';
+function logName (userName, userSurname){ ;
+     console.log(`Имя - ${userName}, Фамилия - ${userSurname} `);
+}
 
-let balanceReady;
-((balance > 1000) || (bonusBalance > 100)) ? balanceReady = true 
-    : balanceReady = false;
+logName ('Димон', 'Василич');
 
-if ((balanceReady === true) && (isBanned == false) && (isExist == false) && (isSelling === true)) {
-     message = 'Успешная покупка';
-} else {
 
-     message = 'Не получилось купить';
+function countDepositSum (depositInUSD, month, rate) {
+
+     const sum = depositInUSD * (1 + rate / 12)**month; //можно сразу вместо конста писать ретёрн =
+     return sum;
 
 }
 
-console.log (`Итог: ${message}`);
+const examlpe1 = countDepositSum(1000, 54, 0.12);
+console.log (examlpe1);
 
+console.log (countDepositSum(1000,22,0.14));
