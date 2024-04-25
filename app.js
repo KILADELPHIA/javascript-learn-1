@@ -1,9 +1,22 @@
-function matveyHuesosAsk (girlfriend) {
-    if (girlfriend === 'Динара') {
-        return 'Ты пидор';
-    } else {
-        return 'Норм чел'
-    }
+const tasks = ['Задача 1', 'Anal1'];
+
+
+function AddTask (nameTask) {
+    tasks.push(nameTask);
+    return console.log(tasks);
 }
 
-console.log(matveyHuesosAsk('Диана'));
+function DeleteTask (nameTask){
+    index = tasks.indexOf(nameTask);
+    tasks.splice(index, 1);
+    console.log(tasks);
+}
+
+function ChangeIndex (nameTask) {
+    index = tasks.indexOf(nameTask);
+    spliced = tasks.splice(index, 1);
+    tasks.unshift(spliced);
+    console.log(tasks);
+}
+
+ChangeIndex('Anal1');
